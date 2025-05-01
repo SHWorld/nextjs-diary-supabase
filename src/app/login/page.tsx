@@ -10,7 +10,10 @@ export default function LoginPage() {
   const handleLogin = async () => {
     if (!email) return;
     setLoading(true);
-    const { error } = await supabase.auth.signInWithOtp({ email });
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: `${location.origin}/login` },
+    });
     setLoading(false);
     if (error) alert(error.message);
     else alert("メールを確認してください！");
