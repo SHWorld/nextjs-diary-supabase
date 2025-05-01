@@ -4,7 +4,6 @@ Next.js × Supabase × Tailwind CSS で作るシンプル日記アプリ
 
 ## Demo
 
-vercelurl
 nextjs-diary-supabase.vercel.app
 
 ## Features
